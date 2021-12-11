@@ -1,3 +1,7 @@
+# Add by David
+*.zip
+dataset/
+
 # History files
 .Rhistory
 .Rapp.history
