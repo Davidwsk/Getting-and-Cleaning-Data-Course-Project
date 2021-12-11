@@ -60,4 +60,4 @@ melted_data <- melt(labeled_data, id=c("subject", "activity_label"))
 
 grouped_data <- melted_data %>% group_by(subject, activity_label, variable) %>% summarise(mean(value))
 
-write.table(grouped_data, file="dataset/tidy-data.txt", row.name=FALSE)
+write.table(grouped_data, file="tidy-data.txt", row.name=FALSE)
