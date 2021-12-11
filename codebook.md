@@ -1,5 +1,4 @@
 # Code Book
-generated 2014-07-10 11:04:30 during sourcing of `run_analysis.R`
 
 ## Actions performed on data:
 * Merges the training and the test sets to create one data set.
