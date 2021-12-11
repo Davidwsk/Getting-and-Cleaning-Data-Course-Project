@@ -1,4 +1,4 @@
-"subject" "activity_label" "variable" "mean(value)"
+"subject" "activity_label" "variable" "value"
 1 "LAYING" "tBodyAcc_mean_X" 0.22159824394
 1 "LAYING" "tBodyAcc_mean_Y" -0.0405139534294
 1 "LAYING" "tBodyAcc_mean_Z" -0.11320355358

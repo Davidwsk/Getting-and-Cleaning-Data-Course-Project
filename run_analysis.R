@@ -38,6 +38,7 @@ extracted_data <- merged_data[,cols]
 # 3. Uses descriptive activity names to name the activities in the data set
 #
 activity_labels <- read.table("dataset/activity_labels.txt", col.names=c("id", "activity_label"))
+activity_labels$activity_label <- as.factor(activity_labels$activity_label)
 labeled_data <- inner_join(extracted_data, activity_labels, by=c("activity"="id"))
 labeled_data$activity <- NULL
 
@@ -58,6 +59,6 @@ names(labeled_data) <- gsub("-", "_", gsub("\\(\\)", "", names(labeled_data)))
 
 melted_data <- melt(labeled_data, id=c("subject", "activity_label"))
 
-grouped_data <- melted_data %>% group_by(subject, activity_label, variable) %>% summarise(mean(value))
+grouped_data <- melted_data %>% group_by(subject, activity_label, variable) %>% summarise(value = mean(value))
 
 write.table(grouped_data, file="tidy-data.txt", row.name=FALSE)
